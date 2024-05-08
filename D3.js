@@ -211,13 +211,13 @@ for (let y = 0; y < starWarsCharacters.length; y++) {
 */
 console.log(charactersNames);
 console.log(famaleCharacters);
-for (let w = 0; w < starWarsCharacters.length; w++) {
+for (let w = 0; w < charactersNames.length; w++) {
   switch (true) {
-    case famaleCharacters[0].name === starWarsCharacters[w].name:
-      delete starWarsCharacters[w];
+    case famaleCharacters[0].name === charactersNames[w].name:
+      delete charactersNames[w];
       break;
-    case famaleCharacters[1].name === starWarsCharacters[w].name:
-      delete starWarsCharacters[w];
+    case famaleCharacters[1].name === charactersNames[w].name:
+      delete charactersNames[w];
       break;
   }
 }
@@ -226,6 +226,6 @@ console.log(starWarsCharacters);
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
-console.log(starWarsCharacters.length);
-let z = Math.random(10);
+
+const z = Math.floor(Math.random() * 10);
 console.log(starWarsCharacters[z]);
